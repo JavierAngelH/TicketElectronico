@@ -1,0 +1,44 @@
+<zk>
+
+ <listener>
+        <description>ThreadLocal Synchronization Listener</description>
+        <listener-class>org.zkoss.zkplus.util.ThreadLocalListener</listener-class>
+    </listener>
+
+    <system-config>
+        <ui-factory-class>org.zkoss.spring.bean.ZkSpringUiFactory</ui-factory-class>
+    </system-config>
+
+ 
+   
+    <preference>
+        <name>ThreadLocal</name>
+        <value>
+            org.springframework.security.core.context.ThreadLocalSecurityContextHolderStrategy=contextHolder
+        </value>
+    </preference>
+
+	<!-- ====================================================== -->
+	<!--   Displays the wait indicator on every user action     -->
+	<!-- ====================================================== -->
+<library-property>
+<name>org.zkoss.zul.progressbox.position</name>
+<value>center,center</value>
+</library-property>
+
+
+
+	<!-- Turn on the following if you want to use the trendy mold as default
+		for all buttons.
+	-->
+	<library-property>
+		<name>org.zkoss.zul.Button.mold</name>
+		<value>trendy</value>
+	</library-property>
+
+    <!--	<desktop-config>
+                <disable-theme-uri>~./zul/css/norm*.css.dsp*</disable-theme-uri>
+                <theme-uri>~./GreyTheme/img.css.dsp</theme-uri>
+        </desktop-config>
+    -->
+</zk>

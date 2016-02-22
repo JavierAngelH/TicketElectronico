@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Detalle">
+	<resultMap id="mapDetalle"
+		class="com.ticket.detalle.bean.DetalleBean">
+		<result property="localizador" column="localizador" columnIndex="1" />
+		<result property="apellidos" column="apellidos"
+			columnIndex="2" />
+		<result property="nombres" column="nombres"
+			columnIndex="3" />
+		<result property="tipoPax" column="tipo_pax" columnIndex="4" />
+		<result property="cedula" column="cedula"
+			columnIndex="5" />
+		<result property="numVuelo" column="num_vue"
+			columnIndex="6" />
+		<result property="fechaVuelo" column="fec_vue"
+			columnIndex="7" />
+		<result property="origen" column="origen" columnIndex="8" />
+		<result property="destino" column="destino"
+			columnIndex="9" />
+		<result property="asiento" column="asiento"
+			columnIndex="10" />
+		<result property="horaCheck" column="hora_check"
+			columnIndex="11" />
+	</resultMap>
+
+	<sql id="select-Detalle">
+        <![CDATA[
+
+select
+  vw_reservaciones.localizador,
+vw_reservaciones.apellidos,
+vw_reservaciones.nombres,
+vw_reservaciones.tipo_pax,
+vw_reservaciones.cedula,
+vw_reservaciones.num_vue,
+vw_reservaciones.fec_vue,
+vw_reservaciones.origen,
+vw_reservaciones.destino,
+vw_reservaciones.asiento,
+vw_reservaciones.hora_check
+
+from dbo.VW_RESERVACIONES
+
+
+
+            ]]>
+	</sql>
+
+	<select id="Detalle.findAll" resultMap="mapDetalle">
+		<include refid="select-Detalle" />
+		ORDER BY vw_reservaciones.localizador
+	</select>
+
+	<select id="Detalle.findByLocalizador" parameterClass="java.lang.String"
+		resultMap="mapDetalle">
+		<include refid="select-Detalle" />
+		WHERE vw_reservaciones.localizador = #localizador#
+
+	</select> 
+
+
+</sqlMap>
+
+	

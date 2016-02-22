@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ticketElectronico" pageWidth="226" pageHeight="400" columnWidth="206" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="75b17609-dc58-4aea-b22b-203e5c4f4e8c">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="91"/>
+	<parameter name="CODIGO_BARRA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NOMBRE_COMPLETO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ASIENTO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="IDENTIFICACION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DESTINO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FECHA_VUELO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="HORA_CHECK" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOCALIZADOR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NUMERO_VUELO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ORIGEN" class="java.lang.String" isForPrompting="false"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="380" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="60d02836-b668-4c9c-a00e-58fd858e8340" x="0" y="3" width="206" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[BOARDING PASS / PASE DE ABORDAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="69bd5e3d-5ba7-4707-9945-44adda99a75a" x="0" y="13" width="206" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[SERAMI C.A.]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="d315769c-6ca0-48bd-88b2-4738a02e4342" x="10" y="280" width="182" height="100"/>
+				<jr:PDF417 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="50.0" textPosition="bottom" quietZone="2.0" minColumns="4" maxColumns="12" minRows="9" maxRows="34" widthToHeightRatio="0.79">
+					<jr:codeExpression><![CDATA[$P{CODIGO_BARRA}]]></jr:codeExpression>
+				</jr:PDF417>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="d1501fc2-1261-4a39-b7cd-81a912818497" x="5" y="82" width="58" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[VUELO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8941d40-f1aa-4c42-9c96-0537170c589a" x="9" y="203" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Favor confirmar su regreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="771a4d56-c35a-49f8-bb41-c9125e697c49" x="9" y="165" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[El pasajero debe estar MEDIA HORA antes del vuelo en la puerta de embarque]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="408dcce2-4d93-43ab-9c30-93a6e30d95ed" x="135" y="112" width="32" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[DESTINO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b50d5678-6e9b-47ab-b3b4-76ef3ae9dbca" x="135" y="97" width="32" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e50c793-4ef8-4dfd-b70c-718b098d8365" x="9" y="183" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[The passenger must be at the boarding gate HALF AN HOUR before departuring]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="68f3c088-f52a-4696-a4ec-917ac5c2ae53" x="5" y="97" width="58" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[SALE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="422d85d4-bdf6-4d86-9aad-5c22235b0305" x="5" y="112" width="58" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ORIGEN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="568d726f-ecca-4fb3-af0e-46544ee6b03f" x="5" y="40" width="31" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[LOC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fdc23d88-89b5-46d2-8c0b-ae40ac177644" x="5" y="68" width="58" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[IDENTIFICACION:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dc0a3410-c3bc-497a-8cd9-cec8ca18a5c6" x="5" y="127" width="58" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ASIENTO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eb1b13d2-b71e-485c-8b1a-ff08f86c34d8" x="9" y="213" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Please confirm your return]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="48ddf748-c0e6-46d8-a996-aafe75fe9ca8" x="9" y="232" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[GRACIAS POR SU PREFERENCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="30a66d93-e3a4-4702-94ed-84695e2e64b6" x="9" y="243" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[THANKS FOR YOUR PREFERENCE]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="29007ad3-0705-4dd6-a250-def0946c0c46" x="24" y="40" width="42" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LOCALIZADOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ede9afe2-b8a2-4bf1-a7ad-fa8158672942" x="59" y="68" width="42" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IDENTIFICACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0fac0f0b-6a30-4798-9fdb-3d40789e6e1f" x="32" y="82" width="42" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO_VUELO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5502fe31-eb35-4bd7-a4ed-e410a1ea98d4" x="5" y="54" width="201" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOMBRE_COMPLETO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e0b04bba-d095-4423-9d49-7df188d0e5be" x="32" y="97" width="42" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HORA_CHECK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="06c9c590-8100-4f0d-9718-da4c7018d2eb" x="32" y="112" width="42" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ORIGEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fe30e8d8-82b7-4597-a441-408be4af85cf" x="35" y="127" width="39" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ASIENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eb0d2244-e267-4cbc-add7-d14061491dd2" x="161" y="97" width="52" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_VUELO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9170cac4-63e7-4ed5-b814-d71b78808d1e" x="166" y="112" width="47" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DESTINO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
